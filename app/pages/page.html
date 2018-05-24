@@ -1,0 +1,22 @@
+---
+title: Page title
+testarray:
+ - name: Alex
+ - name: Igor
+ - name: Nikitaxxx
+---
+
+{% extends 'layouts/_layout.html' %}
+
+{% block content %}
+<span>CONTENT</span>
+
+{% for item in testarray %}
+
+<section>
+    {{item.name}}
+</section>
+
+{% endfor %}
+
+{% endblock %}

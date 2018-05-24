@@ -1,0 +1,30 @@
+---
+title: Project title
+pages:
+- title: page
+  href: page.html
+- title: page1
+  href: page1.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% if title %}{{ title }}{% else %}no-title{% endif %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#fff">
+        <meta name="format-detection" content="telephone=no">
+
+
+    </head>
+    <body>
+        <h3>{{title}}</h3>
+        <hr>
+        {% for page in pages %}
+        <a href="{{page.href}}">{{page.title}}</a>
+        {% endfor %}
+
+    </body>
+</html>
